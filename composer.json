@@ -1,13 +1,15 @@
 {
-    "name": "manu/php-framework",
+    "name": "manu/php-framework-v1",
     "description": "PHP Framework from Scratch",
     "type": "project",
     "require-dev": {
-        "phpunit/phpunit": "^5.2"
+        "phpunit/phpunit": "^5.2",
+        "symfony/var-dumper": "^6.4"
     },
     "autoload": {
         "psr-4": {
-            "Manu\\PhpFramework\\": "src/"
+            "App\\": "app",
+            "Framework\\": "framework"
         }
     },
     "authors": [
@@ -15,6 +17,5 @@
             "name": "Mariya Nikiforova",
             "email": "manu11shet@gmail.com"
         }
-    ],
-    "require": {}
+    ]
 }
