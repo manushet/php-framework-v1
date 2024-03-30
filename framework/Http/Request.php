@@ -9,7 +9,6 @@ class Request
     public function __construct(
         private readonly array $getParams,
         private readonly array $postData,
-        private readonly array $session,
         private readonly array $cookies,
         private readonly array $files,
         private readonly array $server,
@@ -20,6 +19,6 @@ class Request
 
     public static function createFromGlobals(): static
     {
-        return new static($_GET, $_POST, $_SESSION, $_COOKIE, $_FILES, $_SERVER);
+        return new static($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
     }
 }
