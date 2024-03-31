@@ -1,4 +1,5 @@
-/vendor/
-/database_data/
+/vendor
+/framework/vendor
+/database_data
 .env
 

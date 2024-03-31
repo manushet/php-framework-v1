@@ -21,7 +21,7 @@ $response->send();
 
 //print(phpinfo());
 
-// $host = "postgres";
+// $host = "postgres"; 
 // $port = 5432;
 // $dbName = "sample_db";
 // $username = "admin";
