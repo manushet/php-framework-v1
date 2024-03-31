@@ -2,12 +2,7 @@
     "name": "manu/php-framework-v1",
     "description": "Simple PHP Framework",
     "type": "package",
-    "minimum-stability": "dev",
-    "autoload-dev": {
-        "psr-4": {
-            "Framework\\Tests\\": "tests"
-        }
-    },    
+    "minimum-stability": "dev",   
     "autoload": {
         "psr-4": {
             "Framework\\": "src"
@@ -21,10 +16,11 @@
     ],
     "require": {
         "nikic/fast-route": "^1.3",
-        "psr/container": "2.0.x-dev"
+        "psr/container": "2.0.2",
+        "league/container": "^4.2.0",
+        "symfony/dotenv": "7.1.x-dev"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.2"
+        "phpunit/phpunit": "11.1.x-dev"
     }
-  
 }

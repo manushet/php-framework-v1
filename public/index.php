@@ -5,21 +5,20 @@ define('BASE_PATH', dirname(path: __DIR__));
 
 require_once BASE_PATH . '/vendor/autoload.php';
 
-use Framework\Routing\Router;
 use Framework\Http\{Request, Kernel};
+
+$container = require_once(BASE_PATH . '/config/services.php');
 
 $request = Request::createFromGlobals();
 
-$router = new Router();
-
-$kernel = new Kernel($router);
+$kernel = $container->get(Kernel::class);
 
 $response = $kernel->handle($request);
 $response->send();
 
 //var_dump($request);
 
-//print(phpinfo());
+print(phpinfo());
 
 // $host = "postgres"; 
 // $port = 5432;

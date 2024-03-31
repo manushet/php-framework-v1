@@ -1,4 +1,4 @@
-FROM php:8.1.23-fpm
+FROM php:8.3.4-fpm
 
 # Install linux packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -25,7 +25,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install and configure php extensions
 RUN docker-php-ext-configure intl \
     && docker-php-ext-install intl \
-    && docker-php-ext-install pdo pdo_pgsql pgsql bcmath gd zip \
+    && docker-php-ext-install pdo pdo_pgsql pdo_mysql pgsql bcmath gd zip \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && PHP_OPENSSL=yes docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
