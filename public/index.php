@@ -16,19 +16,11 @@ $kernel = $container->get(Kernel::class);
 $response = $kernel->handle($request);
 $response->send();
 
-//var_dump($request);
-
-print(phpinfo());
-
-// $host = "postgres"; 
-// $port = 5432;
-// $dbName = "sample_db";
-// $username = "admin";
-// $password = "password";
-
-// $dsn = "pgsql:host={$host};port={$port};dbname={$dbName};user={$username};password={$password}";
+//print(phpinfo());
 
 /*try {
+    // $dsn = "pgsql:host={$host};port={$port};dbname={$dbName};user={$username};password={$password}";
+    
     $pdo = new PDO($dsn, $username, $password);
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

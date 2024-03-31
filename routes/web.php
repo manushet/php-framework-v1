@@ -11,4 +11,5 @@ return [
     Route::get('/hello/{name}', function(string $name) {
         return new Response("Hello, {$name}!", 200);
     }),
+    Route::get('/posts/create', [PostController::class, 'create']),
 ];

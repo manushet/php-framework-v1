@@ -3,13 +3,15 @@
 namespace App\Controllers;
 
 use Framework\Http\Response;
+use Framework\Controller\AbstractController;
 
-class HomeController extends Controller
+
+class HomeController extends AbstractController
 {
     public function index(): Response
     {
-        $content = '<h2>Home Controller : index page</h2>';
-
-        return new Response($content, 200, []);
+        return $this->render("home.html.twig", [
+            "youtubeChannel" => '@youtubeChannelLink'
+        ]) ;
     } 
 }

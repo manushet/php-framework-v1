@@ -3,13 +3,19 @@
 namespace App\Controllers;
 
 use Framework\Http\Response;
+use Framework\Controller\AbstractController;
 
-class PostController extends Controller
+class PostController extends AbstractController
 {
     public function show(int $id): Response
     {        
-        $content = "<h2>Post Controller : show post #{$id} content</h2>";
+        return $this->render("post.html.twig", [
+                "postID" => $id
+            ]) ;
+    }
 
-        return new Response($content, 200, []);
+    public function create(/*array $post*/): Response
+    {      
+        return $this->render("create-post.html.twig") ;  
     }
 }

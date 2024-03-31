@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container mt-3">
+        <h2>New Post</h2>
+        <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+                <label for="title">Title:</label>
+                <input type="test" class="form-control" id="post-title" placeholder="Enter post title" name="post-title">
+            </div>
+            <div class="mb-3">
+                <label for="post-content">Content:</label>
+                <textarea class="form-control" id="post-content" placeholder="Enter post content" name="post-content"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="add-post" name="add-post">Send</button>
+        </form>
+    </div>
+{% endblock %}
