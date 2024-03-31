@@ -1,0 +1,22 @@
+{
+    "name": "manu/php-framework-v1",
+    "description": "Simple PHP Framework",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mariya Nikiforova",
+            "email": "manu11shet@gmail.com"
+        }
+    ],
+    "require": {
+        "nikic/fast-route": "^1.3"
+    }
+}
